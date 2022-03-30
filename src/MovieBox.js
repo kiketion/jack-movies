@@ -1,5 +1,7 @@
 import React from 'react';
 
+const API_IMG = 'https://image.tmdb.org/t/p/w500';
+
 const MovieBox = ({
   title,
   poster_path,
@@ -8,10 +10,15 @@ const MovieBox = ({
   overview,
 }) => {
   return (
-    <div>
-      <h1>{title}</h1>
-      <img src={`https://image.tmdb.org/t/p/w500${poster_path}`} alt={title} />
-      <p>{overview}</p>
+    <div className='card text-center bg-warning bg-opacity-50 mb-3'>
+      <div className='card-body'>
+        <img className='card-img-top' src={API_IMG + poster_path} alt='' />
+        <div className='card-body'>
+          <button type='button' className='btn btn-dark'>
+            View More
+          </button>
+        </div>
+      </div>
     </div>
   );
 };

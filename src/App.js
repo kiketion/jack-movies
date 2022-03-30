@@ -18,10 +18,12 @@ function App() {
   }, []);
 
   return (
-    <div>
-      {movies.map((movieReq) => (
-        <MovieBox key={movieReq.id} {...movieReq} />
-      ))}
+    <div className='container'>
+      <div className='grid'>
+        {movies.map((movieReq) => (
+          <MovieBox key={movieReq.id} {...movieReq} />
+        ))}
+      </div>
     </div>
   );
 }
