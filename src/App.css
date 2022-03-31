@@ -23,3 +23,14 @@ body {
   grid-gap: 0.2em;
   justify-content: center;
 }
+
+.card-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  position: absolute;
+  top: 20px;
+  left: 16px;
+  right: 16px;
+}
