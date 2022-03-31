@@ -34,3 +34,7 @@ body {
   left: 16px;
   right: 16px;
 }
+
+.card-img:hover {
+  width: 120%;
+}

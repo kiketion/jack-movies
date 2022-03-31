@@ -15,39 +15,39 @@ const MovieBox = ({
   const handleClose = () => setShow(false);
 
   return (
-    <div className='card text-center bg-light mb-3'>
-      <div className='card-body'>
-        <img className='card-img-top' src={API_IMG + poster_path} alt='' />
-        <h5 className='card-title'>{title}</h5>
-        <div className='card-body'>
-          <button type='button' className='btn btn-dark' onClick={handleShow}>
-            View More
-          </button>
-          <Modal show={show} onHide={handleClose}>
-            <Modal.Header>
-              <Modal.Title>{title}</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-              <img
-                className='card-img-top'
-                style={{ width: '14rem' }}
-                src={API_IMG + poster_path}
-                alt=''
-              />
-              <h3>{title}</h3>
-              <h4>ImDb: {vote_average}</h4>
-              <h5>Release Date: {release_date}</h5>
-              <br />
-              <h6>Overview</h6>
-              <p>{overview}</p>
-            </Modal.Body>
-            <Modal.Footer>
-              <Button variant='secondary' onClick={handleClose}>
-                Close
-              </Button>
-            </Modal.Footer>
-          </Modal>
-        </div>
+    <div className='text-center bg-light mb-3'>
+      <h5 className='card-title'>{title}</h5>
+      <div className='card'>
+        <img
+          className='card-img'
+          src={API_IMG + poster_path}
+          onClick={handleShow}
+          alt=''
+        />
+        <Modal show={show} onHide={handleClose}>
+          <Modal.Header>
+            <Modal.Title>{title}</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <img
+              className='card-img-top'
+              style={{ width: '14rem' }}
+              src={API_IMG + poster_path}
+              alt=''
+            />
+            <h3>{title}</h3>
+            <h4>ImDb: {vote_average}</h4>
+            <h5>Release Date: {release_date}</h5>
+            <br />
+            <h6>Overview</h6>
+            <p>{overview}</p>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant='secondary' onClick={handleClose}>
+              Close
+            </Button>
+          </Modal.Footer>
+        </Modal>
       </div>
     </div>
   );
