@@ -16,7 +16,6 @@ const MovieBox = ({
 
   return (
     <div className='text-center bg-light mb-3'>
-      <h5 className='card-title'>{title}</h5>
       <div className='card'>
         <img
           className='card-img'

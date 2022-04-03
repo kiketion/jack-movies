@@ -38,3 +38,7 @@ body {
 .card-img:hover {
   width: 120%;
 }
+
+h2 {
+  background-color: white;
+}
