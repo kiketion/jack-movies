@@ -86,7 +86,7 @@ function App() {
             </div>
           </div>
         ) : (
-          <h2>Sorry!! No Movie Foud!</h2>
+          <h2>Sorry!! No Movie Found!</h2>
         )}
       </div>
     </>
