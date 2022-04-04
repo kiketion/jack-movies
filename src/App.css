@@ -17,11 +17,9 @@ body {
 }
 
 .grid {
-  display: grid;
-  margin-left: 0.5px;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 0.2em;
-  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
 }
 
 .card-title {
@@ -35,10 +33,22 @@ body {
   right: 16px;
 }
 
-.card-img:hover {
-  width: 120%;
+img {
+  width: 100%;
+  height: 449px;
 }
 
-h2 {
-  background-color: white;
+.card {
+  max-width: 300px;
+  width: 100%;
+  padding: 5px;
+  margin: auto;
+  margin-top: 10px;
+
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  -webkit-transform: scale(1.02);
 }
